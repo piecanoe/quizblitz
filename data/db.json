@@ -1,0 +1,22 @@
+{
+  "questionsets": [
+    {
+      "id": 1,
+      "title": "whats the best film?",
+      "answer": "garden state",
+      "type": "movie"
+    },
+    {
+      "id": 2,
+      "title": "who sings the song 'abc'?",
+      "answer": "jackson 5",
+      "type": "music"
+    },
+    {
+      "id": 3,
+      "title": "who is the star of fight club?",
+      "answer": "brad pitt",
+      "type": "movie"
+    }
+  ]
+}
