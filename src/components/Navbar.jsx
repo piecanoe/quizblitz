@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const style = {
     color: "dark blue",
@@ -9,10 +11,11 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Quizzical</h1>
       <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/quiz" style={style}>
-          Start Quiz!
-        </a>
+        <Link to="/">Home</Link>
+        <Link to="/Create">Create A Quiz</Link>
+        <Link to="/quizzes" style={style}>
+          Quizzes
+        </Link>
       </div>
     </nav>
   );

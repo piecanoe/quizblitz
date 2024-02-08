@@ -1,22 +1,25 @@
 {
-  "questionsets": [
+  "quizzes": [
     {
       "id": 1,
-      "title": "whats the best film?",
-      "answer": "garden state",
-      "type": "movie"
+      "title": "Greatest Action Movies!",
+      "category": "movies",
+      "question": "whats the best xmas movie?",
+      "answer": "die hard"
     },
     {
       "id": 2,
-      "title": "who sings the song 'abc'?",
-      "answer": "jackson 5",
-      "type": "music"
+      "title": "Best Punk Songs",
+      "category": "music",
+      "question": "what's nfg's best song?",
+      "answer": "understatement"
     },
     {
       "id": 3,
-      "title": "who is the star of fight club?",
-      "answer": "brad pitt",
-      "type": "movie"
+      "title": "Tom Cruise Stuff",
+      "category": "movies",
+      "question": "what movie is tom cruise a pilot?",
+      "answer": "top gun"
     }
   ]
 }

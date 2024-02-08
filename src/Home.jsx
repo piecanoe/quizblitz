@@ -1,34 +1,18 @@
-import { useState, useEffect } from "react";
-import QuestionList from "./components/QuestionList";
+import QuizList from "./QuizList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-  const [questionSets, setQuestionSets] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  function handleDelete(id) {
-    const newQuestionSets = questionSets.filter(
-      (questionSet) => questionSet.id !== id
-    );
-    setQuestionSets(newQuestionSets);
-  }
-
-  useEffect(() => {
-    fetch("http://localhost:8000/questionsets")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setQuestionSets(data);
-        setIsLoading(false);
-      });
-  }, []);
+  const {
+    data: quizzes,
+    isLoading,
+    error,
+  } = useFetch("http://localhost:8000/quizzes");
 
   return (
     <div className="home">
+      {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
-      {questionSets && (
-        <QuestionList questionSets={questionSets} title="All Questions" />
-      )}
+      {quizzes && <QuizList quizzes={quizzes} title="All Quizzes" />}
       {/* {questionSets && (
         <QuestionList
           questionSets={questionSets.filter(
