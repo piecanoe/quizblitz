@@ -1,19 +1,13 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import QuizList from "./QuizList";
 
-const QuizList = ({ quizzes, title }) => {
+const Quiz = ({ quizzes, title }) => {
   return (
-    <div className="quiz-list">
+    <div className="quiz">
       <h2>{title}</h2>
-      {quizzes.map((quiz) => (
-        <div className="quiz-preview" key={quiz.id}>
-          <Link to={`/quizzes/${quiz.id}`}>
-            <h2>{quiz.title}</h2>
-            <p>{quiz.category}</p>
-          </Link>
-        </div>
-      ))}
+      <QuizList quizzes={quizzes} />
     </div>
   );
 };
 
-export default QuizList;
+export default Quiz;
