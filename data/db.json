@@ -1,21 +1,21 @@
 {
   "quizzes": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Greatest Action Movies!",
       "category": "movies",
       "question": "whats the best xmas movie?",
       "answer": "die hard"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Best Punk Songs",
       "category": "music",
       "question": "what's nfg's best song?",
       "answer": "understatement"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Tom Cruise Stuff",
       "category": "movies",
       "question": "what movie is tom cruise a pilot?",

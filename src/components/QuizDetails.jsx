@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../useFetch";
 
 const QuizDetails = () => {
@@ -8,6 +8,15 @@ const QuizDetails = () => {
     error,
     isLoading,
   } = useFetch("http://localhost:8000/quizzes/" + id);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    fetch("http://localhost:8000/quizzes/" + quiz.id, {
+      method: "DELETE",
+    }).then(() => {
+      navigate("/");
+    });
+  };
 
   return (
     <div className="quiz-details">
@@ -21,6 +30,7 @@ const QuizDetails = () => {
           <div>
             <h3>{quiz.question}</h3>
             <p>{quiz.answer}</p>
+            <button onClick={handleClick}>delete</button>
           </div>
         </article>
       )}
