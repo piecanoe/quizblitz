@@ -1,4 +1,4 @@
-import QuizList from "./QuizList";
+import QuizPage from "./QuizPage";
 import useFetch from "./useFetch";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home">
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
-      {quizData && <QuizList quizData={quizData} />}
+      {quizData && <QuizPage quizData={quizData} />}
       <h1>all quizzes</h1>
     </div>
   );
