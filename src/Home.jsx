@@ -6,14 +6,13 @@ const Home = () => {
     data: quizData,
     isLoading,
     error,
-  } = useFetch("https://opentdb.com/api.php?amount=50&category=11");
+  } = useFetch("https://the-trivia-api.com/v2/questions");
 
-  const quizzes = quizData && quizData.results;
   return (
     <div className="home">
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
-      {quizzes && <QuizList quizzes={quizzes} title="All Quizzes" />}
+      {quizData && <QuizList quizzes={quizData} />}
     </div>
   );
 };
