@@ -2,9 +2,8 @@ import QuizList from "./QuizList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const apiUrl = `https://the-trivia-api.com/v2/questions`;
-  const { data: quizData, error, isLoading } = useFetch(apiUrl);
-  // } = useFetch("http://localhost:8000/results");
+  const url = `https://the-trivia-api.com/v2/questions`;
+  const { data: quizData, error, isLoading } = useFetch(url);
 
   return (
     <div className="home">
