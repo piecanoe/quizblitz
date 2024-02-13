@@ -1,37 +1,25 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useFetch from "../useFetch";
 
 const QuizDetails = () => {
   const { id } = useParams();
   const {
-    data: quiz,
+    data: questions,
     error,
     isLoading,
-  } = useFetch("http://localhost:8000/quizzes/" + id);
-  const navigate = useNavigate();
+  } = useFetch(`https://opentdb.com/api.php?amount=50&category=11`);
 
-  const handleClick = () => {
-    fetch("http://localhost:8000/quizzes/" + quiz.id, {
-      method: "DELETE",
-    }).then(() => {
-      navigate("/");
-    });
-  };
-
+  const quiz = questions && questions.length > 0 ? questions[id] : null;
   return (
     <div className="quiz-details">
       {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {quiz && (
         <article>
-          <h2>Quiz: {quiz.title}</h2>
-          <p>Category: {quiz.category}</p>
-          <br />
-          <div>
-            <h3>{quiz.question}</h3>
-            <p>{quiz.answer}</p>
-            <button onClick={handleClick}>delete</button>
-          </div>
+          <h2>{quiz.category}</h2>
+          <p>Question: {quiz.question}</p>
+          <p>Correct Answer: {quiz.correct_answer}</p>
+          <p>Incorrect Answer: {quiz.incorrect_answers.join(",")}</p>
         </article>
       )}
     </div>

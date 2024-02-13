@@ -3,21 +3,21 @@
     {
       "id": "1",
       "title": "Greatest Action Movies!",
-      "category": "movies",
+      "category": "Movies",
       "question": "whats the best xmas movie?",
       "answer": "die hard"
     },
     {
       "id": "2",
       "title": "Best Punk Songs",
-      "category": "music",
+      "category": "Music",
       "question": "what's nfg's best song?",
       "answer": "understatement"
     },
     {
       "id": "3",
       "title": "Tom Cruise Stuff",
-      "category": "movies",
+      "category": "Movies",
       "question": "what movie is tom cruise a pilot?",
       "answer": "top gun"
     }

@@ -3,24 +3,17 @@ import useFetch from "./useFetch";
 
 const Home = () => {
   const {
-    data: quizzes,
+    data: quizData,
     isLoading,
     error,
-  } = useFetch("http://localhost:8000/quizzes");
+  } = useFetch("https://opentdb.com/api.php?amount=50&category=11");
 
+  const quizzes = quizData && quizData.results;
   return (
     <div className="home">
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
       {quizzes && <QuizList quizzes={quizzes} title="All Quizzes" />}
-      {/* {questionSets && (
-        <QuestionList
-          questionSets={questionSets.filter(
-            (question) => question.type == "movie"
-          )}
-          title="Movie Questions"
-        />
-      )} */}
     </div>
   );
 };
