@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const useFetch = () => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const abortCont = new AbortController();
-    fetch("https://opentdb.com/api.php?amount=50&category=11")
+    fetch(url)
       .then((res) => {
         console.log(res);
         if (!res.ok) {
@@ -30,7 +30,7 @@ const useFetch = () => {
         }
       });
     return () => abortCont.abort();
-  }, []);
+  }, [url]);
 
   return { data, isLoading, error };
 };
