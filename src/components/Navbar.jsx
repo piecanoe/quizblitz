@@ -12,7 +12,7 @@ const Navbar = () => {
       <h1>Quizzical</h1>
       <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="/Create">Create A Quiz</Link>
+        {/* <Link to="/create">Create A Quiz</Link> */}
         <Link to="/quizzes" style={style}>
           Quizzes
         </Link>

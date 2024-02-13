@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-const useFetch = () => {
+const useFetch = (apiUrl) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const abortCont = new AbortController();
-    fetch("https://opentdb.com/api.php?amount=50&category=11")
+    fetch(apiUrl, { signal: abortCont.signal })
       .then((res) => {
         console.log(res);
         if (!res.ok) {
@@ -24,13 +24,13 @@ const useFetch = () => {
         if (err.name === "AbortError") {
           console.log("fetch aborted");
         } else {
-          console.log(err);
+          console.error(err);
           setIsLoading(false);
           setError(err.message);
         }
       });
     return () => abortCont.abort();
-  }, []);
+  }, [apiUrl]);
 
   return { data, isLoading, error };
 };

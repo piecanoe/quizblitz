@@ -2,18 +2,16 @@ import QuizList from "./QuizList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const {
-    data: quizData,
-    isLoading,
-    error,
-  } = useFetch("https://opentdb.com/api.php?amount=50&category=11");
+  const apiUrl = `https://the-trivia-api.com/v2/questions`;
+  const { data: quizData, error, isLoading } = useFetch(apiUrl);
+  // } = useFetch("http://localhost:8000/results");
 
-  const quizzes = quizData && quizData.results;
   return (
     <div className="home">
       {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
-      {quizzes && <QuizList quizzes={quizzes} title="All Quizzes" />}
+      {quizData && <QuizList quizData={quizData} />}
+      <h1>all quizzes</h1>
     </div>
   );
 };
