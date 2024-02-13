@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (apiUrl) => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -30,7 +30,7 @@ const useFetch = (apiUrl) => {
         }
       });
     return () => abortCont.abort();
-  }, [apiUrl]);
+  }, [url]);
 
   return { data, isLoading, error };
 };
