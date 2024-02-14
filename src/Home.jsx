@@ -1,16 +1,22 @@
 import QuizPage from "./QuizPage";
-import useFetch from "./useFetch";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const url = `https://the-trivia-api.com/v2/questions`;
-  const { data: quizData, error, isLoading } = useFetch(url);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/quiz");
+  };
 
   return (
     <div className="home">
-      {error && <div>{error}</div>}
-      {isLoading && <div>Loading...</div>}
-      {quizData && <QuizPage quizData={quizData} />}
-      <h1>all quizzes</h1>
+      <h1>Quizzical</h1>
+      <h2>Test Your Knowledge!</h2>
+      <Link to="/quiz">
+        <button type="button" onClick={handleClick}>
+          Start A Quiz!
+        </button>
+      </Link>
     </div>
   );
 };

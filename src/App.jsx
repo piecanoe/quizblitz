@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./Home";
 import Create from "./Create";
-import QuizList from "./QuizList";
+import QuizPage from "./QuizPage";
 import NotFound from "./components/NotFound";
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
-            <Route path="/questions" element={<QuizList />} />
+            <Route path="/quiz" element={<QuizPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
