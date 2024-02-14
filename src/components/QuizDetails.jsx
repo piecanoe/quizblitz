@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+const shuffleAnswers = (answers) => {
+  return answers.slice().sort(() => Math.random() - 0.5);
+};
 const QuizDetails = ({ quizData, error, isLoading }) => {
-  const shuffleAnswers = (answers) => {
-    return answers.slice().sort(() => Math.random() - 0.5);
-  };
-
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [shuffledAnswers, setShuffledAnswers] = useState([]);
+
+  useEffect(() => {
+    setShuffledAnswers(
+      shuffleAnswers([quizData.correctAnswer, ...quizData.incorrectAnswers])
+    );
+  }, [quizData]);
 
   const handleAnswerClick = (selectedAnswer) => {
     setSelectedAnswer(selectedAnswer);
@@ -21,17 +27,13 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
           <p>Question: {quizData.question.text}</p>
 
           <div className="answer-buttons">
-            {shuffleAnswers([
-              quizData.correctAnswer,
-              ...quizData.incorrectAnswers,
-            ]).map((answer, index) => (
+            {shuffledAnswers.map((answer, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswerClick(answer)}
                 style={{
                   backgroundColor:
-                    selectedAnswer === answer ? "green" : "initial",
-                  //figure out how to do this without 'initial'
+                    selectedAnswer === answer ? "green" : "#f1356d",
                 }}
               >
                 {answer}
