@@ -19,7 +19,7 @@ const QuizPage = () => {
   }, [quizData]);
 
   return (
-    <div className="quiz-list">
+    <div className="quiz-page">
       {error && <div>Error: {error}</div>}
       {isLoading && <div>Loading...</div>}
       {randomQuizData &&

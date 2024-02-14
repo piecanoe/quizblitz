@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <div className="home-page">
       <h1>Quizzical</h1>
       <h2>Test Your Knowledge!</h2>
       <Link to="/quiz">
