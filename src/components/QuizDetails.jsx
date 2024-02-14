@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 const QuizDetails = ({ quizData, error, isLoading }) => {
   const shuffleAnswers = (answers) => {
     return answers.slice().sort(() => Math.random() - 0.5);
   };
 
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+
   const handleAnswerClick = (selectedAnswer) => {
+    setSelectedAnswer(selectedAnswer);
     console.log(`Selected Answer: ${selectedAnswer}`);
   };
   return (
@@ -20,7 +25,14 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
               quizData.correctAnswer,
               ...quizData.incorrectAnswers,
             ]).map((answer, index) => (
-              <button key={index} onClick={() => handleAnswerClick(answer)}>
+              <button
+                key={index}
+                onClick={() => handleAnswerClick(answer)}
+                style={{
+                  backgroundColor:
+                    selectedAnswer === answer ? "green" : "initial",
+                }}
+              >
                 {answer}
               </button>
             ))}
