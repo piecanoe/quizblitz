@@ -31,6 +31,7 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
                 style={{
                   backgroundColor:
                     selectedAnswer === answer ? "green" : "initial",
+                  //figure out how to do this without 'initial'
                 }}
               >
                 {answer}
