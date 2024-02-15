@@ -19,7 +19,7 @@ export default function App() {
             <Route path="/music" element={<QuizPage tags="music" />} />
             <Route
               path="/arts-literature"
-              element={<QuizPage tags="arts-literature" />}
+              element={<QuizPage tags="arts_and_literature" />}
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
