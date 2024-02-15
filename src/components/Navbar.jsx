@@ -9,12 +9,18 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1>Quizzical</h1>
+      <NavLink to="/">
+        <h1>Quizzical</h1>
+      </NavLink>
+
       <div className="nav-links">
-        <NavLink to="/">Home</NavLink>
+        {/* <NavLink to="/">Home</NavLink> */}
+        <NavLink to="/film-tv">Film & TV</NavLink>
+        <NavLink to="/music">Music</NavLink>
+        <NavLink to="/arts-literature">Arts & Literature</NavLink>
         {/* <Link to="/create">Create A Quiz</Link> */}
         <NavLink to="/quiz" style={style}>
-          Random Quiz
+          Random
         </NavLink>
       </div>
     </nav>

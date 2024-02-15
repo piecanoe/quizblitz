@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import QuizDetails from "./components/QuizDetails";
-import useFetch from "./useFetch";
+import QuizDetails from "../components/QuizDetails";
+import useFetch from "../useFetch";
 
-const QuizPage = () => {
-  const url = `https://the-trivia-api.com/v2/questions`;
+const QuizPage = ({ tags }) => {
+  const url = `https://the-trivia-api.com/v2/questions?tags=${tags}`;
   const { data: quizData, error, isLoading } = useFetch(url);
   const [randomQuizData, setRandomQuizData] = useState([]);
   // Function to shuffle an array
@@ -20,6 +20,7 @@ const QuizPage = () => {
 
   return (
     <div className="quiz-page">
+      <h1>{tags}</h1>
       {error && <div>Error: {error}</div>}
       {isLoading && <div>Loading...</div>}
       {randomQuizData &&
