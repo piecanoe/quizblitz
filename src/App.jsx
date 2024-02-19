@@ -4,11 +4,18 @@ import Home from "./views/Home";
 import Create from "./views/Create";
 import QuizPage from "./views/QuizPage";
 import NotFound from "./components/NotFound";
+import background from "./img/background_image.jpg";
 
 export default function App() {
+  const styles = {
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+    height: "100vh",
+  };
+
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={styles}>
         <Navbar />
         <div className="content">
           <Routes>

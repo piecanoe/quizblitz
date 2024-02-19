@@ -22,18 +22,21 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
       {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {quizData && (
-        <article>
-          <h2>{quizData.category}</h2>
-          <p>Question: {quizData.question.text}</p>
+        <article className="quiz-set">
+          {/* <h2>{quizData.category}</h2> */}
+          <h2 className="quiz-question">{quizData.question.text}</h2>
 
-          <div className="answer-buttons">
+          <div className="answers">
             {shuffledAnswers.map((answer, index) => (
               <button
                 key={index}
                 onClick={() => handleAnswerClick(answer)}
                 style={{
+                  height: "3rem",
+                  fontWeight: "500",
+                  fontSize: "1rem",
                   backgroundColor:
-                    selectedAnswer === answer ? "green" : "#f1356d",
+                    selectedAnswer === answer ? "#1ED9D9" : "#148C80",
                 }}
               >
                 {answer}

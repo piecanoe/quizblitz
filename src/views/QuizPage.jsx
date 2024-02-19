@@ -20,13 +20,12 @@ const QuizPage = ({ tags }) => {
 
   return (
     <div className="quiz-page">
-      <h1>{tags}</h1>
+      <h1 className="quiz-category">{tags}</h1>
       {error && <div>Error: {error}</div>}
       {isLoading && <div>Loading...</div>}
       {randomQuizData &&
         randomQuizData.map((quiz) => (
           <div key={quiz.id} className="quiz">
-            <h2>{quiz.question.text}</h2>
             <QuizDetails quizData={quiz} />
           </div>
         ))}

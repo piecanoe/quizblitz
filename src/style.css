@@ -4,7 +4,7 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: white;
 }
 .navbar {
   padding: 20px;
@@ -15,7 +15,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #ffffff;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,7 +26,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #1ed9d9;
 }
 .content {
   max-width: 600px;
@@ -34,42 +34,36 @@
   padding: 20px;
 }
 
-/* quiz-previews / list */
-.quiz-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
-}
-.quiz-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-}
-.quiz-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
-}
-
-.quiz-preview a {
-  text-decoration: none;
-}
-
 /* quiz details page */
-.quiz-details h2 {
+
+.quiz-set {
+  background: white;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.quiz-question {
   font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 10px;
+  color: black;
 }
 .quiz-details div {
   margin: 20px 0;
 }
 
 .quiz-details button {
-  background: #f1356d;
+  background: #148c80;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* create new quiz form */

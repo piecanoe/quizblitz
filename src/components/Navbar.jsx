@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const style = {
-    color: "dark blue",
-    backgroundColor: "lightgreen",
+    color: "#ffffff",
+    backgroundColor: "#1ED9D9",
     borderRadius: "8px",
   };
 
