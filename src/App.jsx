@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Create from "./views/Create";
 import QuizPage from "./views/QuizPage";
+import RandomQuizPage from "./views/RandomQuizPage";
 import NotFound from "./components/NotFound";
 import background from "./img/background_image.jpg";
 
@@ -21,7 +22,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
-            <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/quiz" element={<RandomQuizPage />} />
             <Route path="/film-tv" element={<QuizPage tags="film_and_tv" />} />
             <Route path="/music" element={<QuizPage tags="music" />} />
             <Route

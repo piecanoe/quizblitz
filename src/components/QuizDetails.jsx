@@ -36,7 +36,7 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
                   fontWeight: "500",
                   fontSize: "1rem",
                   backgroundColor:
-                    selectedAnswer === answer ? "#1ED9D9" : "#148C80",
+                    selectedAnswer === answer ? "#04242E" : "#15AAB5",
                 }}
               >
                 {answer}

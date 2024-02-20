@@ -1,3 +1,10 @@
+/* color palette:
+#0E686D - dark teal
+#04242E - charcoal
+#1DC5CC - light blue
+#15AAB5 - mid blue
+#54A7AA - green grey */
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* base styles */
@@ -10,7 +17,7 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -29,15 +36,46 @@
   color: #1ed9d9;
 }
 .content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 40px auto;
   padding: 20px;
+}
+
+/* home page */
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.home-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-hero-button {
+  background-color: #04242e;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.home-hero-title {
+  font-size: 4rem;
+}
+
+.home-hero-tagline {
+  font-size: 2rem;
 }
 
 /* quiz details page */
 
 .quiz-set {
-  background: white;
+  /* background: white; */
+  border: 2px solid white;
   border-radius: 0.5rem;
   margin: 1rem 0;
   padding: 1rem;
@@ -45,14 +83,14 @@
 
 .quiz-question {
   font-size: 20px;
-  color: black;
+  color: white;
 }
 .quiz-details div {
   margin: 20px 0;
 }
 
 .quiz-details button {
-  background: #148c80;
+  background: #1dc5cc;
   color: #fff;
   border: 0;
   padding: 8px;

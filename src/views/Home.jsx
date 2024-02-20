@@ -9,28 +9,28 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      <h1>Quizzical</h1>
-      <h2>Unlock Knowledge, Test Your Wits!</h2>
-      <Link to="/quiz">
-        <button type="button" onClick={handleClick}>
-          Start A Quiz!
-        </button>
-      </Link>
-      <Link to="/film-tv">
-        <button type="button" onClick={handleClick}>
-          Film & TV
-        </button>
-      </Link>
-      <Link to="/music">
-        <button type="button" onClick={handleClick}>
-          Music
-        </button>
-      </Link>
-      <Link to="/arts-literature">
-        <button type="button" onClick={handleClick}>
-          Arts & Literature
-        </button>
-      </Link>
+      <section className="home-hero">
+        <div className="home-hero-text">
+          <h1 className="home-hero-title">Quizzical</h1>
+          <h2 className="home-hero-tagline">
+            Unlock Knowledge,
+            <br />
+            Test Your Wits!
+          </h2>
+          <Link to="/quiz">
+            <button
+              className="home-hero-button"
+              type="button"
+              onClick={handleClick}
+            >
+              Start A Quiz!
+            </button>
+          </Link>
+        </div>
+        <div className="home-hero-img">
+          <img src="./src/img/brain.png" width="450px" />
+        </div>
+      </section>
     </div>
   );
 };
