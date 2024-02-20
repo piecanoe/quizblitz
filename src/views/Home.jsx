@@ -13,9 +13,9 @@ const Home = () => {
         <div className="home-hero-text">
           <h1 className="home-hero-title">Quizzical</h1>
           <h2 className="home-hero-tagline">
-            Unlock Knowledge,
+            Test Your Wits,
             <br />
-            Test Your Wits!
+            Unlock Knowledge!
           </h2>
           <Link to="/quiz">
             <button
@@ -23,7 +23,7 @@ const Home = () => {
               type="button"
               onClick={handleClick}
             >
-              Start A Quiz!
+              Start Quiz!
             </button>
           </Link>
         </div>

@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const style = {
     color: "#ffffff",
-    backgroundColor: "#1ED9D9",
+    backgroundColor: "#04242E",
+    // border: "2px solid white",
     borderRadius: "8px",
+    padding: ".5rem",
   };
 
   return (
@@ -13,14 +15,14 @@ const Navbar = () => {
         <h1>Quizzical</h1>
       </NavLink>
 
-      <div className="nav-links">
+      <div className="navbar-links">
         {/* <NavLink to="/">Home</NavLink> */}
         <NavLink to="/film-tv">Film & TV</NavLink>
         <NavLink to="/music">Music</NavLink>
         <NavLink to="/arts-literature">Arts & Literature</NavLink>
         {/* <Link to="/create">Create A Quiz</Link> */}
         <NavLink to="/quiz" style={style}>
-          Random
+          Random Quiz
         </NavLink>
       </div>
     </nav>
