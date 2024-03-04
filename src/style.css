@@ -120,6 +120,12 @@ html {
   font-weight: 700;
 }
 
+/* quiz page */
+.quiz-category {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 /* quiz details page */
 
 .quiz-set {
@@ -128,6 +134,7 @@ html {
   border-radius: 0.5rem;
   margin: 1rem 0;
   padding: 1rem;
+  background: #04242e47;
 }
 
 .quiz-question {
@@ -139,7 +146,7 @@ html {
 }
 
 .quiz-details button {
-  background: #1dc5cc;
+  background: #04242e;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -155,10 +162,6 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.answer:hover {
-  background: red;
 }
 
 /* create new quiz form */

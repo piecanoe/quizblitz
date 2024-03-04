@@ -31,12 +31,12 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
               <button
                 key={index}
                 onClick={() => handleAnswerClick(answer)}
-                className="answer"
+                className="answer-button"
                 style={{
                   height: '3rem',
                   fontWeight: '500',
                   fontSize: '1rem',
-                  backgroundColor: selectedAnswer === answer ? '#04242E' : '',
+                  backgroundColor: selectedAnswer === answer ? '#15AAB5' : '',
                 }}
               >
                 {answer}
