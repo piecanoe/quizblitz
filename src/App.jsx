@@ -1,22 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./views/Home";
-import Create from "./views/Create";
-import QuizPage from "./views/QuizPage";
-import RandomQuizPage from "./views/RandomQuizPage";
-import NotFound from "./components/NotFound";
-import background from "./img/background_image.jpg";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
+import Create from './views/Create';
+import QuizPage from './views/QuizPage';
+import RandomQuizPage from './views/RandomQuizPage';
+import NotFound from './components/NotFound';
+import background from './img/background_image.jpg';
 
 export default function App() {
-  const styles = {
-    backgroundImage: `url(${background})`,
-    backgroundSize: "cover",
-    height: "100vh",
-  };
-
   return (
     <Router>
-      <div className="App" style={styles}>
+      <div className="App">
         <Navbar />
         <div className="content">
           <Routes>

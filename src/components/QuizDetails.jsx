@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const shuffleAnswers = (answers) => {
   return answers.slice().sort(() => Math.random() - 0.5);
@@ -31,12 +31,12 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
               <button
                 key={index}
                 onClick={() => handleAnswerClick(answer)}
+                className="answer"
                 style={{
-                  height: "3rem",
-                  fontWeight: "500",
-                  fontSize: "1rem",
-                  backgroundColor:
-                    selectedAnswer === answer ? "#04242E" : "#15AAB5",
+                  height: '3rem',
+                  fontWeight: '500',
+                  fontSize: '1rem',
+                  backgroundColor: selectedAnswer === answer ? '#04242E' : '',
                 }}
               >
                 {answer}

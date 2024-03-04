@@ -5,14 +5,23 @@
 #15AAB5 - mid blue
 #54A7AA - green grey */
 
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   color: white;
 }
+
+html {
+  background-image: url('./img/background_image.jpg');
+  background-size: cover;
+  background-repeat: none;
+  /* background-position: center; */
+  height: 100vh;
+}
+
 .navbar {
   padding: 20px;
   display: flex;
@@ -35,6 +44,19 @@
 }
 .navbar a:hover {
   color: #1ed9d9;
+}
+
+.random-quiz-link {
+  background-color: #04242e;
+  color: white;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.random-quiz-link:hover {
+  background-color: #04242e;
 }
 
 /* content */
@@ -126,13 +148,17 @@
 }
 
 .quiz-details button:hover {
-  background: red;
+  background: #0e686d;
 }
 
 .answers {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.answer:hover {
+  background: red;
 }
 
 /* create new quiz form */

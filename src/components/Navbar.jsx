@@ -1,14 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-  const style = {
-    color: "#ffffff",
-    backgroundColor: "#04242E",
-    // border: "2px solid white",
-    borderRadius: "8px",
-    padding: ".5rem",
-  };
-
   return (
     <nav className="navbar">
       <NavLink to="/">
@@ -21,7 +13,7 @@ const Navbar = () => {
         <NavLink to="/music">Music</NavLink>
         <NavLink to="/arts-literature">Arts & Literature</NavLink>
         {/* <Link to="/create">Create A Quiz</Link> */}
-        <NavLink to="/quiz" style={style}>
+        <NavLink to="/quiz" className="random-quiz-link">
           Random Quiz
         </NavLink>
       </div>
