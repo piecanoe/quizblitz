@@ -13,9 +13,9 @@ const Home = () => {
         <div className="home-hero-text">
           <h1 className="home-hero-title">QuizBlitz</h1>
           <h2 className="home-hero-tagline">
-            Where Culture,
+            Where Culture Takes
             <br />
-            Takes Center Stage!
+            Center Stage!
           </h2>
           <Link to="/quiz">
             <button
