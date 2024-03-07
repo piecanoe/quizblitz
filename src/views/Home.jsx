@@ -11,11 +11,11 @@ const Home = () => {
     <div className="home-page">
       <section className="home-hero">
         <div className="home-hero-text">
-          <h1 className="home-hero-title">Quizzical</h1>
+          <h1 className="home-hero-title">QuizBlitz</h1>
           <h2 className="home-hero-tagline">
-            Test Your Wits,
+            Where Culture,
             <br />
-            Unlock Knowledge!
+            Takes Center Stage!
           </h2>
           <Link to="/quiz">
             <button
