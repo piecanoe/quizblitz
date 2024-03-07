@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import QuizDetails from "../components/QuizDetails";
-import useFetch from "../useFetch";
+import { useState, useEffect } from 'react';
+import QuizDetails from '../components/QuizDetails';
+import useFetch from '../useFetch';
 
 const QuizPage = ({ tags }) => {
   const url = `https://the-trivia-api.com/v2/questions?`;
@@ -20,7 +20,7 @@ const QuizPage = ({ tags }) => {
 
   return (
     <div className="quiz-page">
-      <h1 className="quiz-category">{tags}</h1>
+      <h1>Random Quiz</h1>
       {error && <div>Error: {error}</div>}
       {isLoading && <div>Loading...</div>}
       {randomQuizData &&
