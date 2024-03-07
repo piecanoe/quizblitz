@@ -1,9 +1,11 @@
 const Footer = () => {
-    return (
-        <div className="footer">
-        <a>Created by Karen Du</a>
-        </div>
-    );
-}
- 
-export default ;
+  return (
+    <div className="footer">
+      <a href="https://karendu.netlify.app" target="_blank">
+        Created by Karen Du © 2004
+      </a>
+    </div>
+  );
+};
+
+export default Footer;

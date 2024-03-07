@@ -5,7 +5,7 @@ import Create from './views/Create';
 import QuizPage from './views/QuizPage';
 import RandomQuizPage from './views/RandomQuizPage';
 import NotFound from './components/NotFound';
-import background from './img/background_image.jpg';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -26,6 +26,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );

@@ -197,3 +197,17 @@ html {
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* footer */
+.footer a {
+  position: absolute;
+  bottom: 0;
+  left: 80vw;
+  padding: 20px 0;
+  text-decoration: none;
+  display: flex;
+}
+
+.footer a:hover {
+  color: #1ed9d9;
+}
