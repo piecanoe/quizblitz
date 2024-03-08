@@ -30,6 +30,7 @@ const QuizPage = ({ tags }) => {
             <QuizDetails quizData={quiz} />
           </div>
         ))}
+      <button className="submit">Submit</button>
     </div>
   );
 };
