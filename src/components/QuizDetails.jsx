@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const shuffleAnswers = (answers) => {
   return answers.slice().sort(() => Math.random() - 0.5);
 };
-const QuizDetails = ({ quizData, error, isLoading }) => {
+const QuizDetails = ({ quizData, error, isLoading, onAnswerSelect }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
@@ -15,8 +15,9 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
 
   const handleAnswerClick = (selectedAnswer) => {
     setSelectedAnswer(selectedAnswer);
-    console.log(`Selected Answer: ${selectedAnswer}`);
+    onAnswerSelect(selectedAnswer);
   };
+
   return (
     <div className="quiz-details">
       {isLoading && <div>Loading...</div>}
