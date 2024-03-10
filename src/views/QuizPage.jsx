@@ -5,7 +5,7 @@ import useFetch from '../useFetch';
 const QuizPage = ({ tags }) => {
   const url = `https://the-trivia-api.com/v2/questions?tags=${tags}`;
   const { data: quizData, error, isLoading } = useFetch(url);
-  const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState([]);
   const [randomQuizData, setRandomQuizData] = useState([]);
   const [score, setScore] = useState(null);
   const formattedTags = tags.replace(/_/g, ' ');
@@ -15,44 +15,19 @@ const QuizPage = ({ tags }) => {
   };
 
   const handleAnswerSelect = (selectedAnswer) => {
-    setSelectedAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      [quizData.id]: selectedAnswer,
-    }));
-  };
+    setSelectedAnswer(selectedAnswer);
+    console.log(selectedAnswer);
 
-  const handleSubmit = () => {
-    // Check if all questions are answered before submitting
-    if (Object.keys(selectedAnswers).length !== quizData.length) {
-      console.log('Please answer all questions before submitting.');
-      return;
+    if (selectedAnswer === quizData.question.correctAnswer) {
+      console.log('nice!');
+    } else {
+      console.log('wrong');
     }
-
-    // Compare submitted answers with correct answers
-    const correctAnswers = quizData.map((question) => question.correctAnswer);
-    const submittedAnswers = Object.values(selectedAnswers);
-
-    // Count the number of correct answers
-    const numCorrectAnswers = submittedAnswers.filter(
-      (answer, index) => answer === correctAnswers[index]
-    ).length;
-
-    // Calculate the score (percentage)
-    const percentageScore = (numCorrectAnswers / correctAnswers.length) * 100;
-
-    // Update the score state
-    setScore(percentageScore);
-
-    // Additional logic for handling submission if needed
-    console.log('Submitted Answers:', selectedAnswers);
-    console.log('Number of Correct Answers:', numCorrectAnswers);
-    console.log('Score:', percentageScore);
   };
 
-  // Shuffle the quizData array and take the first 5 elements
   useEffect(() => {
     if (quizData) {
-      setRandomQuizData(shuffleArray(quizData).slice(0, 5));
+      setRandomQuizData(shuffleArray(quizData).slice(0, 1));
     }
   }, [quizData]);
 
@@ -72,9 +47,7 @@ const QuizPage = ({ tags }) => {
             />
           </div>
         ))}
-      <button className="submit" onClick={handleSubmit}>
-        Submit
-      </button>
+
       {score !== null && <p>Your Score: {score}%</p>}
     </div>
   );

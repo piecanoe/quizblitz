@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 const shuffleAnswers = (answers) => {
   return answers.slice().sort(() => Math.random() - 0.5);
 };
-const QuizDetails = ({ quizData, error, isLoading, onAnswerSelect }) => {
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+const QuizDetails = ({ quizData, error, isLoading }) => {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState([]);
 
   useEffect(() => {
     setShuffledAnswers(
@@ -15,7 +15,14 @@ const QuizDetails = ({ quizData, error, isLoading, onAnswerSelect }) => {
 
   const handleAnswerClick = (selectedAnswer) => {
     setSelectedAnswer(selectedAnswer);
-    onAnswerSelect(selectedAnswer);
+    console.log(selectedAnswer);
+    console.log(quizData.correctAnswer);
+
+    if (selectedAnswer === quizData.correctAnswer) {
+      console.log('nice!');
+    } else {
+      console.log('wrong');
+    }
   };
 
   return (
