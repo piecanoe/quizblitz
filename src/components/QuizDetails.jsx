@@ -6,6 +6,8 @@ const shuffleAnswers = (answers) => {
 const QuizDetails = ({ quizData, error, isLoading }) => {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState([]);
+  const [feedback, setFeedback] = useState('');
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     setShuffledAnswers(
@@ -19,9 +21,10 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
     console.log(quizData.correctAnswer);
 
     if (selectedAnswer === quizData.correctAnswer) {
-      console.log('nice!');
+      setFeedback('Correct!');
+      setScore((prevScore) => prevScore + 1);
     } else {
-      console.log('wrong');
+      setFeedback('Incorrect!');
     }
   };
 
@@ -51,8 +54,10 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
               </button>
             ))}
           </div>
+          <p>{feedback}</p>
         </article>
       )}
+      <p>Current score: {score}</p>
     </div>
   );
 };
