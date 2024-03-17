@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react';
 const shuffleAnswers = (answers) => {
   return answers.slice().sort(() => Math.random() - 0.5);
 };
-const QuizDetails = ({ quizData, error, isLoading }) => {
+const QuizDetails = ({ quizData, error, isLoading, isLastQuestion }) => {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState([]);
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
+  const [answerChosen, setAnswerChosen] = useState(false);
 
   useEffect(() => {
     setShuffledAnswers(
@@ -15,10 +16,15 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
     );
   }, [quizData]);
 
-  const handleAnswerClick = (selectedAnswer) => {
+  // useEffect(() => {
+  //   console.log(score); // Log the updated score after it's been set
+  // }, [score]); // Run this effect whenever score changes
+
+  const handleAnswerClick = (selectedAnswer, event) => {
+    event.preventDefault();
     setSelectedAnswer(selectedAnswer);
-    console.log(selectedAnswer);
-    console.log(quizData.correctAnswer);
+    // console.log('selected', selectedAnswer);
+    // console.log('correct', quizData.correctAnswer);
 
     if (selectedAnswer === quizData.correctAnswer) {
       setFeedback('Correct!');
@@ -26,6 +32,9 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
     } else {
       setFeedback('Incorrect!');
     }
+
+    setAnswerChosen(true);
+    console.log(score);
   };
 
   return (
@@ -34,30 +43,41 @@ const QuizDetails = ({ quizData, error, isLoading }) => {
       {error && <div>{error}</div>}
       {quizData && (
         <article className="quiz-set">
-          {/* <h2>{quizData.category}</h2> */}
           <h2 className="quiz-question">{quizData.question.text}</h2>
 
-          <div className="answers">
+          <form className="answers">
             {shuffledAnswers.map((answer, index) => (
               <button
                 key={index}
-                onClick={() => handleAnswerClick(answer)}
+                onClick={() => handleAnswerClick(answer, event)}
+                disabled={answerChosen}
                 className="answer-button"
                 style={{
                   height: '3rem',
                   fontWeight: '500',
                   fontSize: '1rem',
-                  backgroundColor: selectedAnswer === answer ? '#15AAB5' : '',
+                  backgroundColor:
+                    selectedAnswer === answer &&
+                    selectedAnswer === quizData.correctAnswer &&
+                    answerChosen
+                      ? '#50C878' // Green background for correct and selected answer after choosing an answer
+                      : selectedAnswer === answer &&
+                        selectedAnswer !== quizData.correctAnswer
+                      ? '#FF5733' // Red background for incorrect selected answer
+                      : selectedAnswer !== answer &&
+                        answer === quizData.correctAnswer &&
+                        answerChosen
+                      ? '#50C878' // Green background for correct answer after choosing an answer
+                      : '',
                 }}
               >
                 {answer}
               </button>
             ))}
-          </div>
-          <p>{feedback}</p>
+          </form>
+          {selectedAnswer && <p className="feedback">{feedback}</p>}
         </article>
       )}
-      <p>Current score: {score}</p>
     </div>
   );
 };
