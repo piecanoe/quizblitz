@@ -168,18 +168,15 @@ body {
   gap: 0.5rem;
 }
 
-.submit {
-  background: #04242e;
-  color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Quicksand';
-  font-size: 1.1rem;
+.feedback {
+  display: flex;
+
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
-/* create new quiz form */
+/* create new quiz form
 .create {
   max-width: 400px;
   margin: 0 auto;
@@ -211,7 +208,7 @@ body {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-}
+} */
 
 /* footer */
 .footer {
