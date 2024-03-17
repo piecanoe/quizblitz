@@ -4,6 +4,7 @@ import Home from './views/Home';
 import Create from './views/Create';
 import QuizPage from './views/QuizPage';
 import RandomQuizPage from './views/RandomQuizPage';
+import ScorePage from './views/ScorePage';
 import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 
@@ -23,6 +24,7 @@ export default function App() {
               path="/arts-literature"
               element={<QuizPage tags="arts_and_literature" />}
             />
+            <Route path="/score" element={<ScorePage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
