@@ -30,7 +30,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="home-hero-img">
-          <img src={brainImage} width="450px" alt="Brain image" />
+          <img src={brainImage} width="85%" alt="Brain image" />
         </div>
       </section>
     </div>

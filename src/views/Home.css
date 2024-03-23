@@ -1,18 +1,13 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 80vh;
-  max-width: 80vw;
 }
 
 .home-hero {
   display: flex;
-  justify-content: space-between;
-  width: 85vh;
-  max-width: 800px;
-  margin: 0, auto;
+  align-items: center;
+  justify-content: center;
   gap: 30px;
   color: white;
 }
@@ -21,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .home-hero-button {
@@ -55,6 +50,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    padding: 30px 0;
   }
 
   .home-hero-text {
@@ -63,5 +59,10 @@
 
   .home-hero-title {
     margin: 10px;
+  }
+
+  .home-hero-img {
+    display: flex;
+    justify-content: center;
   }
 }
