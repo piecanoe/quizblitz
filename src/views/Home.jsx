@@ -1,4 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
+import brainImage from '/src/img/brain.png';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="home-hero-img">
-          <img src="./src/img/brain.png" width="450px" alt="Brain image" />
+          <img src={brainImage} width="450px" alt="Brain image" />
         </div>
       </section>
     </div>
