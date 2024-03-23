@@ -1,0 +1,23 @@
+.quiz-page {
+  padding: 0 10%;
+}
+
+.quiz-category {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.try-again {
+  background: #04242e;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+.try-again:hover {
+  color: #1ed9d9;
+}

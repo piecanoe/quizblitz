@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import QuizDetails from '../components/QuizDetails';
 import useFetch from '../useFetch';
+import './QuizPage.css';
 
 const QuizPage = ({ tags }) => {
   const url = `https://the-trivia-api.com/v2/questions?tags=${tags}`;

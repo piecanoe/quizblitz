@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import brainImage from '/src/img/brain.png';
+import './Home.css';
 
 const Home = () => {
   const navigate = useNavigate();

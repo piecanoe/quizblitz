@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './QuizDetails.css';
 
 const shuffleAnswers = (answers) => {
   return answers.slice().sort(() => Math.random() - 0.5);
