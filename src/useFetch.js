@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
   const [data, setData] = useState(null);
@@ -13,7 +13,7 @@ const useFetch = (url) => {
         const res = await fetch(url, { signal: abortCont.signal });
 
         if (!res.ok) {
-          throw Error("Could not fetch data for that resource");
+          throw Error('Could not fetch data for that resource');
         }
         if (!abortCont.signal.aborted) {
           const fetchedData = await res.json();
@@ -22,8 +22,8 @@ const useFetch = (url) => {
           setError(null);
         }
       } catch (err) {
-        if (err.name === "AbortError") {
-          console.log("Fetch aborted");
+        if (err.name === 'AbortError') {
+          console.log('Fetch aborted');
         } else {
           console.error(err);
           if (!abortCont.signal.aborted) {

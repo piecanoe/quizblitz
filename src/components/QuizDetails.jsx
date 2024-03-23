@@ -7,7 +7,6 @@ const QuizDetails = ({ quizData, error, isLoading, isLastQuestion }) => {
   const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState([]);
   const [feedback, setFeedback] = useState('');
-  const [score, setScore] = useState(0);
   const [answerChosen, setAnswerChosen] = useState(false);
 
   useEffect(() => {
@@ -16,15 +15,9 @@ const QuizDetails = ({ quizData, error, isLoading, isLastQuestion }) => {
     );
   }, [quizData]);
 
-  // useEffect(() => {
-  //   console.log(score); // Log the updated score after it's been set
-  // }, [score]); // Run this effect whenever score changes
-
   const handleAnswerClick = (selectedAnswer, event) => {
     event.preventDefault();
     setSelectedAnswer(selectedAnswer);
-    // console.log('selected', selectedAnswer);
-    // console.log('correct', quizData.correctAnswer);
 
     if (selectedAnswer === quizData.correctAnswer) {
       setFeedback('Correct!');
@@ -34,7 +27,6 @@ const QuizDetails = ({ quizData, error, isLoading, isLastQuestion }) => {
     }
 
     setAnswerChosen(true);
-    console.log(score);
   };
 
   return (

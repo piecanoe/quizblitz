@@ -130,6 +130,20 @@ body {
   text-decoration: none;
 }
 
+.try-again {
+  background: #04242e;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.try-again:hover {
+  background: #0e686d;
+}
+
 /* quiz details page */
 
 .quiz-set {
