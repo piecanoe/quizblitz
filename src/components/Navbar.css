@@ -25,15 +25,11 @@
   font-weight: 500;
   color: white;
 }
-.navbar a:hover {
-  color: #1ed9d9;
-}
 
 .random-quiz-link {
   background-color: #04242e;
   color: white;
-  /* border: 1px solid white; */
-  padding: 6px;
+  padding: 7px;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -41,6 +37,7 @@
 
 .random-quiz-link:hover {
   background-color: #04242e;
+  color: #1ed9d9;
 }
 
 @media only screen and (max-width: 800px) {
