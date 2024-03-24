@@ -16,7 +16,6 @@ const QuizPage = ({ tags }) => {
 
   const handleClick = (e) => {
     window.location.reload();
-    console.log('clicked');
   };
 
   useEffect(() => {
