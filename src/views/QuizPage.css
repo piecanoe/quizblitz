@@ -21,3 +21,15 @@
 .try-again:hover {
   color: #1ed9d9;
 }
+
+@media only screen and (max-width: 800px) {
+  .quiz-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .try-again {
+    padding: 20px;
+  }
+}
