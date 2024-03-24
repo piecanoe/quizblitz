@@ -22,7 +22,6 @@ const QuizDetails = ({ quizData, error, isLoading, isLastQuestion }) => {
 
     if (selectedAnswer === quizData.correctAnswer) {
       setFeedback('Correct!');
-      setScore((prevScore) => prevScore + 1);
     } else {
       setFeedback('Incorrect!');
     }
