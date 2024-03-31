@@ -11,6 +11,10 @@ const QuizPage = ({ tags }) => {
     return array.slice().sort(() => Math.random() - 0.5);
   };
 
+  const handleClick = (e) => {
+    window.location.reload();
+  };
+
   // Shuffle the quizData array and take the first 5 elements
   useEffect(() => {
     if (quizData) {
@@ -29,6 +33,10 @@ const QuizPage = ({ tags }) => {
             <QuizDetails quizData={quiz} />
           </div>
         ))}
+
+      <button className="try-again" onClick={handleClick}>
+        Start New Quiz
+      </button>
     </div>
   );
 };
