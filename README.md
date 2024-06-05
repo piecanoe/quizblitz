@@ -22,6 +22,12 @@ It's where culture takes center stage!
 
 Karen Du
 
-GitHub - (https://github.com/piecanoe)
+- GitHub - (https://github.com/piecanoe)
+- Website - (https://karendu.netlify.app)
 
-Website - (https://karendu.netlify.app)
+## Credits
+
+Images:
+
+- Brain: - [Pixabay](https://pixabay.com/vectors/brain-human-anatomy-head-1531009/)
+- Background - [Freepik](https://www.freepik.com/free-vector/gradient-emerald-background_39757952.htm#query=teal%20wallpaper&position=8&from_view=keyword&track=ais_user&uuid=81176a4c-1047-4a53-abdd-eb88e7bc922d)
