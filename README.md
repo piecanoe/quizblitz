@@ -1,9 +1,25 @@
-# React + Vite
+# QuizBlitz!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+[QuizBlitz!] (https://quizblitz.netlify.app/) is a pop culture quiz game. Test your knowledge in categories like film, tv, music, art, and literature.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# quizzical
+It's where culture takes center stage!
+
+## Screenshots:
+
+## Built With:
+
+- React.js
+- JavaScript
+- HTML 5
+- CSS 3
+- [The Trivia API] (https://the-trivia-api.com/)
+
+## Authors
+
+Contributors names and contact info
+
+Karen Du
+GitHub - (https://github.com/piecanoe)
+Website - (https://karendu.netlify.app)
